@@ -1,10 +1,13 @@
 from colors import bcolors
 import random
+import os 
+
 
 number_of_attempts = 7
 user_attempts = 0
 user_answer = 0
 correct_answer = random.randint(1, 100)
+
 
 print("Hi! Let's try guessing a number from 1 to 100.")
 print("You have only 7 attempts.")
@@ -13,9 +16,10 @@ running = True
 
 while running:
     number_of_attempts = 7
-    print(correct_answer)
+    
        
     while True:
+        os.system('cls')
         try:
             user_answer = int(input("Guess the number! "))
         except ValueError:
